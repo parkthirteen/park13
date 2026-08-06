@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ブロックチェーン統合の技術リスクレビュー | park13</title>
-  <meta name="description" content="ブロックチェーン統合・デジタル資産インフラの技術リスクレビュー。監査・本番投入・外部連携の前に、判定、優先順位付き所見、次のアクションを明確にします。">
+  <meta name="description" content="ブロックチェーン統合・デジタル資産インフラの技術リスクレビュー。本監査・本番投入・外部連携の前に、判定、優先順位付き所見、次のアクションを明確にします。日英対応。">
   <link rel="canonical" href="https://park13.digital/">
   <link rel="alternate" hreflang="ja" href="https://park13.digital/">
   <link rel="alternate" hreflang="en" href="https://park13.digital/en/">
@@ -15,57 +15,285 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:url" content="https://park13.digital/">
   <meta property="og:title" content="ブロックチェーン統合の技術リスクレビュー | park13">
-  <meta property="og:description" content="監査・本番投入・外部連携の前に、重大な技術リスクと優先修正事項を明確にします。">
+  <meta property="og:description" content="コントラクトは監査されても、システムは大丈夫か。本監査・本番投入の前に、重大リスクと次の一手を明確にします。">
   <meta property="og:site_name" content="park13">
   <meta property="og:image" content="https://park13.digital/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta name="twitter:image" content="https://park13.digital/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://park13.digital/assets/og.png">
   <meta name="twitter:title" content="ブロックチェーン統合の技術リスクレビュー | park13">
-  <meta name="twitter:description" content="対象システムの判定、優先順位付き所見、次のアクションまで。">
+  <meta name="twitter:description" content="本監査・本番投入・外部連携の前に、判定と優先修正事項を明確にします。">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+JP:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ProfessionalService","name":"park13","legalName":"Park13 K.K.","url":"https://park13.digital/","email":"contact@park13.digital","description":"Independent technical risk review of blockchain integrations and digital-asset infrastructure.","areaServed":["JP","AU"],"address":{"@type":"PostalAddress","addressLocality":"Tokyo","addressCountry":"JP"},"knowsLanguage":["ja","en"]}
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "park13",
+    "legalName": "Park13 K.K.",
+    "url": "https://park13.digital/",
+    "email": "contact@park13.digital",
+    "description": "Independent technical risk review of blockchain integrations and digital-asset infrastructure.",
+    "areaServed": ["JP", "AU"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tokyo",
+      "addressCountry": "JP"
+    },
+    "knowsLanguage": ["ja", "en"]
+  }
   </script>
 </head>
 <body>
   <a class="skip" href="#main">本文へスキップ</a>
-  <header class="site-header"><div class="wrap"><a class="brand" href="/"><img src="/assets/mark.svg" width="28" height="28" alt=""><span class="brand-name">park13</span></a><nav class="nav" aria-label="ページ内"><a href="#experience">00 経験</a><a href="#review">01 レビュー</a><a href="#scope">02 対象</a><a href="#output">03 成果物</a><a href="#process">04 進め方</a><a href="#fit">05 適合</a><a href="#contact">06 連絡</a><a class="lang" href="/en/" lang="en" hreflang="en">EN</a></nav></div></header>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <img src="/assets/mark.svg" width="28" height="28" alt="">
+        <span class="brand-name">park13</span>
+      </a>
+      <nav class="nav" aria-label="ページ内">
+        <a href="#experience">00 経験</a>
+        <a href="#review">01 レビュー</a>
+        <a href="#scope">02 対象</a>
+        <a href="#output">03 成果物</a>
+        <a href="#process">04 進め方</a>
+        <a href="#fit">05 向いている場面</a>
+        <a href="#contact">06 連絡</a>
+        <a class="lang" href="/en/" lang="en" hreflang="en">EN</a>
+      </nav>
+    </div>
+  </header>
 
   <main id="main">
-    <section class="section hero" aria-labelledby="hero-title"><div class="wrap"><div>
-      <p class="eyebrow">独立系テクニカルリスクレビュー · 監査前 · 本番投入前 · 改修</p>
-      <h1 id="hero-title">監査・本番投入・外部連携を止める技術リスクを、先に潰す。</h1>
-      <p>park13 は、ブロックチェーン統合とデジタル資産インフラを、実際の用途と運用条件に照らしてレビューします。重大なリスクに優先順位を付け、判定と次のアクションまで明確にします。本監査や本番投入の段階で時間と予算を失う前に、判断できる状態をつくります。</p>
-      <div class="actions"><a class="btn" href="mailto:contact@park13.digital?subject=park13%20%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E7%9B%B8%E8%AB%87&body=%E6%B1%BA%E3%82%81%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%E3%83%BB%E6%8A%95%E5%85%A5%E3%81%97%E3%81%9F%E3%81%84%E3%82%82%E3%81%AE%EF%BC%9A%0A%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%EF%BC%9A%0A%E6%99%82%E6%9C%9F%EF%BC%9A%0A">相談する</a><a class="btn btn-ghost" href="#experience">なぜ park13 か →</a></div>
-      <ul class="hero-points"><li>規制下の本番システム</li><li>L1/L2・ブリッジ統合</li><li>事業者としての本番投入</li><li>日英の成果物</li></ul>
-    </div><aside class="card" aria-label="レビュー成果物の例"><div class="card-kicker">レビュー</div><p class="card-title">P13-04 · <span class="sys">「settlement bridge v2」</span></p><ul class="card-rows"><li><span class="k">判定</span><span><span class="stamp">AMBER</span></span></li><li><span class="k">所見</span><span>3件（要修正）</span></li><li><span class="k">次の対応</span><span>P13-04を修正し、再検証</span></li></ul></aside></div></section>
+    <section class="section hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">独立系テクニカルリスクレビュー · 監査前 · 本番投入前 · 改修</p>
+          <h1 id="hero-title">監査・本番投入・外部連携を止める技術リスクを、先に潰す。</h1>
+          <p>park13 は、ブロックチェーン統合とデジタル資産インフラを、実際の用途と運用条件に照らしてレビューします。重大なリスクに優先順位を付け、判定と次のアクションまで明確にします。本監査や本番投入で時間と予算を失う前に、判断できる状態をつくります。</p>
+          <div class="actions">
+            <a class="btn" href="mailto:contact@park13.digital?subject=park13%20%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E7%9B%B8%E8%AB%87&body=%E6%B1%BA%E3%82%81%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%E3%83%BB%E6%8A%95%E5%85%A5%E3%81%97%E3%81%9F%E3%81%84%E3%82%82%E3%81%AE%EF%BC%9A%0A%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%EF%BC%9A%0A%E6%99%82%E6%9C%9F%EF%BC%9A%0A">相談する</a>
+            <a class="btn btn-ghost" href="#experience">なぜ park13 か →</a>
+          </div>
+          <ul class="hero-points">
+            <li>日英の成果物</li>
+            <li>コントラクトの外側の運用</li>
+            <li>規制下の本番システム</li>
+            <li>L1/L2・ブリッジ統合</li>
+          </ul>
+        </div>
+        <aside class="card" aria-label="レビュー成果物の例">
+          <div class="card-kicker">レビュー</div>
+          <p class="card-title">P13-04 · <span class="sys">「settlement bridge v2」</span></p>
+          <ul class="card-rows">
+            <li><span class="k">判定</span><span><span class="stamp">AMBER</span></span></li>
+            <li><span class="k">所見</span><span>3件（要修正）</span></li>
+            <li><span class="k">次の対応</span><span>P13-04を修正し、再検証</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-    <section class="section" id="experience" aria-labelledby="experience-title"><div class="wrap">
-      <p class="idx">00 · 経験</p><h2 id="experience-title">規制下の本番運用と、事業者としての製品投入。その両方を経験しています。</h2>
-      <p>park13 は、シニア EVM インフラエンジニアが一人で担う実務です。各国の規制下で事業を行うグローバルなデジタル資産企業で、本番ブロックチェーン基盤の設計・統合・運用に携わってきた経験と、日本・オーストラリアの小規模事業で資本・納期・評判を負いながらオンチェーン製品を立ち上げてきた経験の両方を、同じ判断に使います。</p>
-      <p>大規模組織で求められる統制、追跡可能性、運用規律と、小規模事業で求められる速度、優先順位付け、結果への直接責任。その両方を踏まえて、このシステムをどの条件なら投入できるかを判断します。</p>
-      <div class="exp"><article class="door"><div class="n">00</div><h3>規制下の本番インフラ</h3><p>L1/L2、ブリッジ、トークン対応、カストディ・取引境界、監査後の改修、本番運用。</p></article><article class="door"><div class="n">01</div><h3>事業者としての本番投入経験</h3><p>資金と人員が限られる事業で、オンチェーン製品を設計・実装し、本番投入してきた経験。</p></article><article class="door"><div class="n">02</div><h3>システム全体を見る実装経験</h3><p>コントラクト、バックエンド、ノード・RPC、取引ライフサイクル、照合、監視、障害対応。</p></article><article class="door"><div class="n">03</div><h3>日英両言語での意思決定支援</h3><p>技術チーム、経営層、提携先、稟議向けの成果物を英語・日本語で提供します。</p></article></div>
-      <p class="footnote">上記は本実務の背景となる職務・事業経験の要約です。現職・元職・取引先による park13 の推奨、承認、提携を意味しません。</p>
-    </div></section>
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="wrap">
+        <p class="idx">00 · 経験</p>
+        <h2 id="experience-title">規制下の本番運用と、創業者としての製品投入。その両方です。</h2>
+        <p>park13 は、シニア EVM インフラエンジニアが一人で担う実務です。各国の規制下で事業を行うグローバルなデジタル資産企業で、本番ブロックチェーン基盤の設計・統合・運用に携わってきた経験と、日本・オーストラリアの小規模事業で資本・納期・評判を負いながらオンチェーン製品を立ち上げてきた経験の両方を、同じ判断に使います。</p>
+        <p>大規模組織で求められる統制、追跡可能性、運用規律と、小規模事業で求められる速度、優先順位付け、結果への直接責任。その両方を踏まえて、このシステムをどの条件なら投入できるかを判断します。</p>
+        <div class="exp">
+          <article class="door">
+            <div class="n">00</div>
+            <h3>規制下の本番インフラ</h3>
+            <p>L1/L2、ブリッジ、トークン対応、カストディ・取引境界、監査後の改修、本番運用。</p>
+          </article>
+          <article class="door">
+            <div class="n">01</div>
+            <h3>創業者としての本番投入</h3>
+            <p>資金と人員が限られる事業で、オンチェーン製品を設計・実装し、自ら責任を負って本番投入してきた経験。</p>
+          </article>
+          <article class="door">
+            <div class="n">02</div>
+            <h3>システム全体を見る実装経験</h3>
+            <p>コントラクト、バックエンド、ノード・RPC、取引ライフサイクル、照合、監視、障害対応。</p>
+          </article>
+          <article class="door">
+            <div class="n">03</div>
+            <h3>日英両言語での意思決定支援</h3>
+            <p>技術チーム、経営層、提携先、稟議向けの成果物を英語・日本語で提供します。</p>
+          </article>
+        </div>
+        <p class="footnote">上記は本実務の背景となる職務・事業経験の要約です。所属先や取引先による park13 の推奨、承認、提携を意味しません。</p>
+      </div>
+    </section>
 
-<section class="section" id="review" aria-labelledby="review-title"><div class="wrap"><p class="idx">01 · レビュー</p><h2 id="review-title">一つのレビューで、三つの判断を前に進める。</h2><p>本監査の準備、リリース判断、監査後の残件整理のいずれでも、同じ型を使います。何が失敗し得るか、何を変えれば判定が変わるか、次に何をするべきかを明確にします。</p><div class="doors"><article class="door"><div class="n">00</div><h3>監査前レビュー</h3><p>正式監査に入る前に、設計・実装・運用上の重大リスクを確認します。「監査前に修正すべき項目」と「正式監査で確認すべき専門論点」を切り分けます。</p></article><article class="door"><div class="n">01</div><h3>Go / No-Go</h3><p>指定したシステムを、想定用途と運用条件のもとで本番投入・外部連携・承認してよいかを判定します。</p></article><article class="door"><div class="n">02</div><h3>監査後の残存リスク</h3><p>未解決所見、実装差分、代替統制を整理し、実行可能なリリース判断へつなげます。</p></article></div><p class="footnote">正式な監査証明は専門の監査ファームが担います。必要な場合は、レポートに記載した所見IDに限定して改修・再検証を行います。</p></div></section>
+    <section class="section" id="review" aria-labelledby="review-title">
+      <div class="wrap">
+        <p class="idx">01 · レビュー</p>
+        <h2 id="review-title">一つのレビューで、三つの判断を前に進める。</h2>
+        <p>コントラクトは本監査の対象でも、台帳のずれ、詰まった nonce、RPC の集中、誰も気づかない障害までは見られないことがあります。park13 は、実際の使われ方の下でシステムが持つかを見ます。本監査の準備、リリース判断、監査後の残件整理のいずれでも同じ型です。</p>
+        <div class="doors">
+          <article class="door">
+            <div class="n">00</div>
+            <h3>監査前レビュー</h3>
+            <p>本監査に入る前に、設計・実装・運用上の重大リスクを確認します。「先に修正すべき項目」と「本監査で確認すべき専門論点」を切り分けます。</p>
+          </article>
+          <article class="door">
+            <div class="n">01</div>
+            <h3>Go / No-Go</h3>
+            <p>指定したシステムを、想定用途と運用条件のもとで本番投入・外部連携・承認してよいかを判定します。</p>
+          </article>
+          <article class="door">
+            <div class="n">02</div>
+            <h3>監査後の残存リスク</h3>
+            <p>未解決所見、実装差分、代替統制を整理し、実行可能なリリース判断へつなげます。</p>
+          </article>
+        </div>
+        <p class="footnote">本監査の証明は専門の監査ファームが担います。必要な場合は、レポートに記載した所見 ID に限定して改修・再検証を行います。</p>
+      </div>
+    </section>
 
-    <section class="section" id="scope" aria-labelledby="scope-title"><div class="wrap"><p class="idx">02 · 対象</p><h2 id="scope-title">コントラクトだけでなく、その周囲で失敗するものまで見る。</h2><div class="scope"><div class="scope-item"><div class="n">00</div><h3>アーキテクチャと信頼境界</h3><p>署名者、管理者、ベンダー、オラクル、ブリッジ、アップグレード経路。</p></div><div class="scope-item"><div class="n">01</div><h3>カストディと取引フロー</h3><p>アドレス管理、署名、確認、再試行、停止、復旧。</p></div><div class="scope-item"><div class="n">02</div><h3>コントラクトと統合ロジック</h3><p>状態遷移、トークン挙動、イベント前提、nonce、手数料。</p></div><div class="scope-item"><div class="n">03</div><h3>ノード・RPC・外部依存</h3><p>可用性、フェイルオーバー、プロバイダー集中、チェーン固有の挙動。</p></div><div class="scope-item"><div class="n">04</div><h3>台帳と照合</h3><p>オンチェーン状態と内部台帳の整合、例外処理、手動介入、監査証跡。</p></div><div class="scope-item"><div class="n">05</div><h3>監視と障害対応</h3><p>検知されない障害、誤検知、停止条件、復旧、エスカレーション。</p></div></div><p class="footnote">一つの統合またはデジタル資産システムを、意思決定に必要な深さで確認します。全社を対象とする一般的な診断ではありません。</p></div></section>
+    <section class="section" id="scope" aria-labelledby="scope-title">
+      <div class="wrap">
+        <p class="idx">02 · 対象</p>
+        <h2 id="scope-title">コントラクトだけでなく、その周囲で失敗するものまで見る。</h2>
+        <p class="lede">監査ファームが厚いのはコントラクト面です。ここで差が出るのは、その外側です。オンチェーンと内部台帳の乖離、再試行経路、プロバイダ集中、サイレント障害。</p>
+        <div class="scope">
+          <div class="scope-item">
+            <div class="n">00</div>
+            <h3>アーキテクチャと信頼境界</h3>
+            <p>署名者、管理者、ベンダー、オラクル、ブリッジ、アップグレード経路。</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">01</div>
+            <h3>カストディと取引フロー</h3>
+            <p>アドレス管理、署名、確認、再試行、停止、復旧。</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">02</div>
+            <h3>コントラクトと統合ロジック</h3>
+            <p>状態遷移、トークン挙動、イベント前提、nonce、手数料。</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">03</div>
+            <h3>ノード・RPC・外部依存</h3>
+            <p>可用性、フェイルオーバー、プロバイダー集中、チェーン固有の挙動。</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">04</div>
+            <h3>台帳と照合</h3>
+            <p>オンチェーン状態と内部台帳の整合、例外処理、手動介入、監査証跡。再編成や部分障害時を含む。</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">05</div>
+            <h3>監視と障害対応</h3>
+            <p>検知されない障害、誤検知、停止条件、復旧、エスカレーション。</p>
+          </div>
+        </div>
+        <p class="footnote">一つの統合またはデジタル資産システムを、意思決定に必要な深さで確認します。全社を対象とする一般診断ではありません。</p>
+      </div>
+    </section>
 
-    <section class="section" id="output" aria-labelledby="output-title"><div class="wrap"><p class="idx">03 · 成果物</p><h2 id="output-title">レポートの終点は、脆弱性一覧ではなく判断です。</h2><div class="block-list"><ul class="clean"><li>判定：想定用途に対する GREEN / AMBER / RED</li><li>範囲：確認したもの、確認していないもの</li><li>優先順位付き所見：失敗経路、重大度、影響を受ける資産・利用者・運用</li><li>信頼境界：鍵、管理者、アップグレード、カストディ、ブリッジ、外部依存</li><li>切り分け：監査・本番投入前に修正する項目 / 正式監査で確認する項目 / 後回しにできる項目</li><li>判定を改善するために必要な変更・証拠</li><li>経営向け要約：技術レポートは英語または日本語。必要に応じて、もう一方の言語で要約を付属</li></ul></div><p class="example">例 · 「settlement bridge v2」 · 判定 AMBER · P13-04 と P13-07 は本番投入前に修正 · 残所見は対応計画済み</p><p class="footnote">レポートは、合意した用途・前提・範囲に対する意思決定支援です。正式な監査証明や、脆弱性が存在しないことの保証ではありません。</p></div></section>
+    <section class="section" id="output" aria-labelledby="output-title">
+      <div class="wrap">
+        <p class="idx">03 · 成果物</p>
+        <h2 id="output-title">レポートの終点は、脆弱性一覧ではなく判断です。</h2>
+        <div class="block-list">
+          <ul class="clean">
+            <li>判定：想定用途に対する GREEN / AMBER / RED</li>
+            <li>範囲：確認したもの、確認していないもの</li>
+            <li>優先順位付き所見（例：P13-04）：失敗経路、重大度、影響を受ける資産・利用者・運用</li>
+            <li>信頼境界：鍵、管理者、アップグレード、カストディ、ブリッジ、外部依存</li>
+            <li>切り分け：本監査・本番投入前に修正する項目 / 本監査で確認する項目 / 後回しにできる項目</li>
+            <li>判定を改善するために必要な変更・証拠</li>
+            <li>経営向け要約：技術レポートは英語または日本語。必要に応じて、もう一方の言語で要約を付属</li>
+          </ul>
+        </div>
+        <p class="example">例 · 「settlement bridge v2」 · 判定 AMBER · P13-04 と P13-07 は本番投入前に修正 · 残所見は対応計画済み</p>
+        <p class="footnote">レポートは、合意した用途・前提・範囲に対する意思決定支援です。本監査の証明や、脆弱性が存在しないことの保証ではありません。責任範囲は契約で定めます。</p>
+      </div>
+    </section>
 
-    <section class="section" id="process" aria-labelledby="process-title"><div class="wrap"><p class="idx">04 · 進め方</p><h2 id="process-title">対象を絞り、判断を出し、見つかったものだけを直す。</h2><div class="exp"><article class="door"><div class="n">01</div><h3>レビュー条件を定義する</h3><p>対象システム、想定用途、判断事項、期限、確認可能な資料・環境を定義します。固定価格はその範囲に基づきます。</p></article><article class="door"><div class="n">02</div><h3>レビュー</h3><p>資料、コード、構成、運用上の証拠を想定用途に照らして確認し、必要な質問を担当者へ行います。</p></article><article class="door"><div class="n">03</div><h3>判定とレポート</h3><p>判定、優先順位付き所見、対応の切り分け、経営向け要約を提出します。</p></article><article class="door"><div class="n">04</div><h3>改修と再検証</h3><p>任意・上限付き。書面化した所見IDに限定して実施します。</p></article></div></div></section>
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="wrap">
+        <p class="idx">04 · 進め方</p>
+        <h2 id="process-title">対象を絞り、判断を出し、見つかったものだけを直す。</h2>
+        <div class="exp">
+          <article class="door">
+            <div class="n">01</div>
+            <h3>レビュー条件を定義する</h3>
+            <p>対象システム、想定用途、判断事項、期限、確認可能な資料・環境を定義します。固定価格はその範囲に基づきます。</p>
+          </article>
+          <article class="door">
+            <div class="n">02</div>
+            <h3>レビュー</h3>
+            <p>資料、コード、構成、運用上の証拠を想定用途に照らして確認し、必要な質問を担当者へ行います。</p>
+          </article>
+          <article class="door">
+            <div class="n">03</div>
+            <h3>判定とレポート</h3>
+            <p>判定、優先順位付き所見、対応の切り分け、経営向け要約を提出します。</p>
+          </article>
+          <article class="door">
+            <div class="n">04</div>
+            <h3>改修と再検証</h3>
+            <p>任意・上限付き。書面化した所見 ID に限定して実施します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <section class="section" id="fit" aria-labelledby="fit-title"><div class="wrap"><p class="idx">05 · 向いている場面</p><h2 id="fit-title">期限のある技術判断を抱えるチーム向けです。</h2><div class="split"><div><h3>park13 が引き受ける問題</h3><ul class="clean"><li>本監査、本番投入、外部連携、提携承認が近いが、技術リスクがまだ曖昧</li><li>実際の利用条件で何が失敗し得るかを、優先順位付きで把握したい</li><li>修正、監査会社への引き継ぎ、稟議まで使える成果物を日英で揃えたい</li><li>レポート後、重大な所見だけを短期間で改修・再検証したい</li></ul></div><div><h3>別の選択肢が適している場合</h3><ul class="clean"><li>正式な監査証明や「監査済み」表示のみが目的</li><li>常駐型の人員補充や継続的な開発チームが必要</li><li>主な課題がトークン、NFT、上場、市場戦略</li><li>対象システムや判断事項がまだ定まっていない</li></ul></div></div><p class="cred">すべての案件を同一の担当者が直接進め、同時進行は一件に限定しています。</p></div></section>
+    <section class="section" id="fit" aria-labelledby="fit-title">
+      <div class="wrap">
+        <p class="idx">05 · 向いている場面</p>
+        <h2 id="fit-title">期限のある技術判断を抱えるチーム向けです。</h2>
+        <div class="split">
+          <div>
+            <h3>park13 が引き受ける問題</h3>
+            <ul class="clean">
+              <li>本監査、本番投入、外部連携、提携承認が近いが、技術リスクがまだ曖昧</li>
+              <li>実際の利用条件で何が失敗し得るかを、運用面まで含めて優先順位付きで把握したい</li>
+              <li>修正、監査会社への引き継ぎ、稟議まで使える成果物を日英で揃えたい</li>
+              <li>レポート後、重大な所見だけを短期間で改修・再検証したい</li>
+            </ul>
+          </div>
+          <div>
+            <h3>別の選択肢が適している場合</h3>
+            <ul class="clean">
+              <li>本監査の証明や「監査済み」表示のみが目的</li>
+              <li>常駐型の人員補充や継続的な開発チームが必要</li>
+              <li>主な課題がトークン、NFT、上場、市場戦略</li>
+              <li>対象システムや判断事項がまだ定まっていない</li>
+            </ul>
+          </div>
+        </div>
+        <p class="cred">すべての案件を同一の担当者が直接進め、同時進行は一件に限定しています。本格的な案件では、背景や参照は個別にお伝えします。</p>
+      </div>
+    </section>
 
-    <section class="section section-ink" id="contact" aria-labelledby="contact-title"><div class="wrap contact-block"><p class="idx">06 · 連絡</p><h2 id="contact-title">対象システム、判断事項、期限をお知らせください。</h2><p>短いメモで十分です。案件との適合、想定範囲、必要資料、固定価格をご案内します。正式な監査証明が主目的の場合は、適切な専門ファームをご案内します。</p><a class="mail" href="mailto:contact@park13.digital?subject=park13%20%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E7%9B%B8%E8%AB%87&body=%E6%B1%BA%E3%82%81%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%E3%83%BB%E6%8A%95%E5%85%A5%E3%81%97%E3%81%9F%E3%81%84%E3%82%82%E3%81%AE%EF%BC%9A%0A%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%EF%BC%9A%0A%E6%99%82%E6%9C%9F%EF%BC%9A%0A">contact@park13.digital</a><div class="actions"><a class="btn" href="mailto:contact@park13.digital?subject=park13%20%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E7%9B%B8%E8%AB%87&body=%E6%B1%BA%E3%82%81%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%E3%83%BB%E6%8A%95%E5%85%A5%E3%81%97%E3%81%9F%E3%81%84%E3%82%82%E3%81%AE%EF%BC%9A%0A%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%EF%BC%9A%0A%E6%99%82%E6%9C%9F%EF%BC%9A%0A">相談する</a></div></div></section>
+    <section class="section section-ink" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-block">
+        <p class="idx">06 · 連絡</p>
+        <h2 id="contact-title">対象システム、判断事項、期限をお知らせください。</h2>
+        <p>短いメモで十分です。案件との適合、想定範囲、必要資料、固定価格をご案内します。本監査の証明が主目的の場合は、適切な専門ファームをご案内します。</p>
+        <p class="note" style="color:inherit;opacity:0.75">社内ブラウザで mailto が使えない場合は、通常のメールクライアントから下記アドレスへご連絡ください。</p>
+        <a class="mail" href="mailto:contact@park13.digital?subject=park13%20%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E7%9B%B8%E8%AB%87&body=%E6%B1%BA%E3%82%81%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%E3%83%BB%E6%8A%95%E5%85%A5%E3%81%97%E3%81%9F%E3%81%84%E3%82%82%E3%81%AE%EF%BC%9A%0A%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%EF%BC%9A%0A%E6%99%82%E6%9C%9F%EF%BC%9A%0A">contact@park13.digital</a>
+        <div class="actions">
+          <a class="btn" href="mailto:contact@park13.digital?subject=park13%20%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E7%9B%B8%E8%AB%87&body=%E6%B1%BA%E3%82%81%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%E3%83%BB%E6%8A%95%E5%85%A5%E3%81%97%E3%81%9F%E3%81%84%E3%82%82%E3%81%AE%EF%BC%9A%0A%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%EF%BC%9A%0A%E6%99%82%E6%9C%9F%EF%BC%9A%0A">相談する</a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><div class="wrap"><div><strong>park13</strong> — 独立系テクニカルリスクレビュー · tokyo · <a href="/en/" hreflang="en">EN</a></div><p class="legal">Park13 K.K. · テクニカルリスク評価と改修支援 · 判定は合意した用途・前提・範囲に限定されます。正式な監査証明は専門の監査ファームが担います。</p></div></footer>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div><strong>park13</strong> — 独立系テクニカルリスクレビュー · tokyo · <a href="/en/" hreflang="en">EN</a></div>
+      <p class="legal">Park13 K.K. · 東京 · テクニカルリスク評価と改修支援 · 判定は合意した用途・前提・範囲に限定されます。本監査の証明は専門の監査ファームが担います。責任範囲は個別契約で定めます。</p>
+    </div>
+  </footer>
 </body>
 </html>
