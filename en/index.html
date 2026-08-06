@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>park13 — independent technical risk review</title>
+  <meta name="description" content="Technical risk review on a named system (X). Before the firm audit or go-live: verdict, ranked findings, what to fix first. Not a formal security audit certificate.">
+  <link rel="canonical" href="https://park13.digital/en/">
+  <link rel="alternate" hreflang="en" href="https://park13.digital/en/">
+  <link rel="alternate" hreflang="ja" href="https://park13.digital/">
+  <link rel="alternate" hreflang="x-default" href="https://park13.digital/">
+  <meta name="theme-color" content="#F7F8F7">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:url" content="https://park13.digital/en/">
+  <meta property="og:title" content="park13 — independent technical risk review">
+  <meta property="og:description" content="Before the firm audit or go-live, find what’s dangerous — and fix it first. Not a formal security audit certificate.">
+  <meta property="og:site_name" content="park13">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="park13 — independent technical risk review">
+  <meta name="twitter:description" content="Technical risk review on a named system. Not a formal security audit certificate.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+JP:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "park13",
+    "legalName": "Park13 K.K.",
+    "url": "https://park13.digital/",
+    "email": "contact@park13.digital",
+    "description": "Independent technical risk review on a named system. Pre-audit review, go/no-go assessment, and residual risk — not a formal security audit certificate.",
+    "areaServed": ["JP", "AU"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tokyo",
+      "addressCountry": "JP"
+    },
+    "knowsLanguage": ["ja", "en"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/en/">
+        <img src="/assets/mark.svg" width="28" height="28" alt="">
+        <span class="brand-name">park13</span>
+      </a>
+      <nav class="nav" aria-label="On this page">
+        <a href="#review">00 review</a>
+        <a href="#scope">01 scope</a>
+        <a href="#fit">02 fit</a>
+        <a href="#contact">03 contact</a>
+        <a class="lang" href="/" lang="ja" hreflang="ja">日本語</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Independent technical risk review</p>
+          <h1 id="hero-title">Before the firm audit or go-live, find what’s dangerous — and fix it first.</h1>
+          <p>I review a named system (X) for how you actually use it. You get a verdict, ranked findings, and a clear next decision. I do not issue a formal security audit certificate. Optional hardening or re-verify is only on written finding IDs.</p>
+          <div class="actions">
+            <a class="btn" href="mailto:contact@park13.digital?subject=park13%20review%20inquiry&body=Named%20system%20X%3A%0ADecision%20needed%20(pre-audit%20%2F%20ship%20%2F%20integrate%20%E2%80%A6)%3A%0ATimeline%3A%0A">Name the system</a>
+            <a class="btn btn-ghost" href="#review">How it works →</a>
+          </div>
+        </div>
+        <aside class="card" aria-label="Example review artifact">
+          <div class="card-kicker">review</div>
+          <p class="card-title">P13-04 · <span class="sys">“settlement bridge v2”</span></p>
+          <ul class="card-rows">
+            <li><span class="k">verdict</span><span><span class="stamp">AMBER</span></span></li>
+            <li><span class="k">findings</span><span>3 (fix before ship)</span></li>
+            <li><span class="k">next</span><span>fix P13-04, re-verify</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="review" aria-labelledby="review-title">
+      <div class="wrap">
+        <p class="idx">00 · review</p>
+        <h2 id="review-title">One review engine. Three decisions.</h2>
+        <div class="doors">
+          <article class="door">
+            <div class="n">00</div>
+            <h3>Pre-audit review</h3>
+            <p>Before the firm burns hours: what’s dangerous, what to fix first vs leave for them. They still own the certificate.</p>
+          </article>
+          <article class="door">
+            <div class="n">01</div>
+            <h3>Go / no-go</h3>
+            <p>Is X fit to ship, integrate, or approve under your intended use and ops?</p>
+          </article>
+          <article class="door">
+            <div class="n">02</div>
+            <h3>Post-audit residual</h3>
+            <p>Turn open findings and code changes into a release decision — not a floating issue list.</p>
+          </article>
+        </div>
+        <p class="footnote">Optional: capped fix or re-verify on written IDs only. No guarantee any auditor “passes” you.</p>
+      </div>
+    </section>
+
+    <section class="section" id="scope" aria-labelledby="scope-title">
+      <div class="wrap">
+        <p class="idx">01 · scope</p>
+        <h2 id="scope-title">Not only the contracts — what fails around them.</h2>
+        <div class="scope">
+          <div class="scope-item">
+            <div class="n">00</div>
+            <h3>Architecture and trust boundaries</h3>
+            <p>Signers, admins, vendors, oracles, bridges, upgrade paths.</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">01</div>
+            <h3>Custody and transaction flow</h3>
+            <p>Address control, signing, confirmation, retry, halt, recovery.</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">02</div>
+            <h3>Contracts and integration logic</h3>
+            <p>State transitions, token behaviour, event assumptions, nonce and fees.</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">03</div>
+            <h3>Nodes, RPC, dependencies</h3>
+            <p>Availability, failover, provider concentration, chain-specific behaviour.</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">04</div>
+            <h3>Ledgers and reconciliation</h3>
+            <p>On-chain vs internal books, exceptions, manual intervention, audit trail.</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">05</div>
+            <h3>Monitoring and incident response</h3>
+            <p>Silent failure, false positives, halt conditions, recovery, escalation.</p>
+          </div>
+        </div>
+        <p class="footnote">Scope follows the technical boundary of one named integration or digital-asset system X. Access is limited to what that decision needs.</p>
+      </div>
+    </section>
+
+    <section class="section" id="fit" aria-labelledby="fit-title">
+      <div class="wrap">
+        <p class="idx">02 · fit</p>
+        <h2 id="fit-title">Only when X and the decision are clear.</h2>
+        <div class="split">
+          <div>
+            <h3>A fit when</h3>
+            <ul class="clean">
+              <li>There is a dated audit, release, integration, approval, or partnership decision</li>
+              <li>The system X (or integration path) can be named</li>
+              <li>Code, technical docs, and owners are reachable in an agreed scope</li>
+              <li>You are willing to change design or implementation when risk warrants it</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Not offered</h3>
+            <ul class="clean">
+              <li>“Reviewed by park13” badges or engagements whose only goal is a formal audit certificate</li>
+              <li>Open-ended staff augmentation or retainers</li>
+              <li>Token, NFT, investment, listing, or market strategy work</li>
+              <li>General advice with no named X and no decision</li>
+            </ul>
+            <p class="note">Hardening or re-verify limited to written finding IDs is a separate, capped option.</p>
+          </div>
+        </div>
+        <p class="cred">Not a firm. One senior EVM / infrastructure reviewer. Findings and exec summary in EN and/or JA.</p>
+      </div>
+    </section>
+
+    <section class="section section-ink" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-block">
+        <p class="idx">03 · contact</p>
+        <h2 id="contact-title">Start with X.</h2>
+        <p>Send what X is, the decision (pre-audit / ship / integrate…), and the date. If it fits: scope, access list, fixed fee. If you only need a firm badge, I’ll point you to audit firms.</p>
+        <a class="mail" href="mailto:contact@park13.digital?subject=park13%20review%20inquiry&body=Named%20system%20X%3A%0ADecision%20needed%3A%0ATimeline%3A%0A">contact@park13.digital</a>
+        <div class="actions">
+          <a class="btn" href="mailto:contact@park13.digital?subject=park13%20review%20inquiry&body=Named%20system%20X%3A%0ADecision%20needed%3A%0ATimeline%3A%0A">Name the system</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div><strong>park13</strong> — independent technical risk review · tokyo · <a href="/" hreflang="ja">日本語</a></div>
+      <p class="legal">Park13 K.K. · Technical risk assessment & hardening · Not a formal security audit certificate. This site explains fit for serious inquiries; it is not a solicitation.</p>
+    </div>
+  </footer>
+</body>
+</html>

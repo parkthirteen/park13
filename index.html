@@ -1,81 +1,203 @@
 <!DOCTYPE html>
-<html>
-  <head>
-      <title>park13株式会社</title> 
-      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  </head>
-
-  <body>
-      <body>
-          <header>
-            <h2>park13株式会社</h2>
-          </header>
-          <main>
-            <section class="description">
-              <div>fintech - blockchain - software</div>
-              <div> フィンテック - ブロックチェーン -  ソフトウェア</div>
-            </section>
-            <section class="contact">
-              <a id="email" href="mailto:contact@park13.digital">contact@park13.digital</a>
-            </section>
-          </main>
-          <footer></footer>
-      </body>
-  </body>
-
-<style>
-  :root {
-    --black: #1b1b1b;
-    --purple: #564295;
-    --grey: #9594c0;
-    --offwhite: #d5e6cb;
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>park13 — 独立系テクニカルリスクレビュー</title>
+  <meta name="description" content="指定したシステム（X）のテクニカルリスクレビュー。監査や本番投入の前に危険箇所を洗い出し、判定と優先所見を提示します。正式な監査証明は出しません。">
+  <link rel="canonical" href="https://park13.digital/">
+  <link rel="alternate" hreflang="ja" href="https://park13.digital/">
+  <link rel="alternate" hreflang="en" href="https://park13.digital/en/">
+  <link rel="alternate" hreflang="x-default" href="https://park13.digital/">
+  <meta name="theme-color" content="#F7F8F7">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:url" content="https://park13.digital/">
+  <meta property="og:title" content="park13 — 独立系テクニカルリスクレビュー">
+  <meta property="og:description" content="指定したシステム（X）のテクニカルリスクレビュー。監査や本番投入の前に危険箇所を洗い出し、先に直す。正式な監査証明は出しません。">
+  <meta property="og:site_name" content="park13">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="park13 — 独立系テクニカルリスクレビュー">
+  <meta name="twitter:description" content="指定したシステム（X）のテクニカルリスクレビュー。正式な監査証明は出しません。">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+JP:wght@400;500&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "park13",
+    "legalName": "Park13 K.K.",
+    "url": "https://park13.digital/",
+    "email": "contact@park13.digital",
+    "description": "Independent technical risk review on a named system. Pre-audit review, go/no-go assessment, and residual risk — not a formal security audit certificate.",
+    "areaServed": ["JP", "AU"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tokyo",
+      "addressCountry": "JP"
+    },
+    "knowsLanguage": ["ja", "en"]
   }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <img src="/assets/mark.svg" width="28" height="28" alt="">
+        <span class="brand-name">park13</span>
+      </a>
+      <nav class="nav" aria-label="ページ内">
+        <a href="#review">00 レビュー</a>
+        <a href="#scope">01 対象範囲</a>
+        <a href="#fit">02 適合条件</a>
+        <a href="#contact">03 連絡</a>
+        <a class="lang" href="/en/" lang="en" hreflang="en">EN</a>
+      </nav>
+    </div>
+  </header>
 
-  html {
-    background: var(--purple);
-    background-image: url("layer.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    background-color: var(--purple);
-  }
+  <main id="main">
+    <section class="section hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">独立系テクニカルリスクレビュー</p>
+          <h1 id="hero-title">監査や本番投入の前に、危険なところを洗い出し、先に直す。</h1>
+          <p>指定したシステム（X）を、想定する使い方に沿ってレビューします。判定と優先順位付きの所見を出し、監査・リリース・統合の判断材料にします。正式な監査証明は出しません。必要なら、書面の所見IDに限って改修または再検証も行います。</p>
+          <div class="actions">
+            <a class="btn" href="mailto:contact@park13.digital?subject=park13%20%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E7%9B%B8%E8%AB%87&body=%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%20X%EF%BC%9A%0A%E5%BF%85%E8%A6%81%E3%81%AA%E5%88%A4%E6%96%AD%EF%BC%88%E7%9B%A3%E6%9F%BB%E5%89%8D%20%2F%20%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%20%2F%20%E7%B5%B1%E5%90%88%20%E7%AD%89%EF%BC%89%EF%BC%9A%0A%E6%9C%9F%E9%99%90%EF%BC%9A%0A">システムを指定する</a>
+            <a class="btn btn-ghost" href="#review">進め方を見る →</a>
+          </div>
+        </div>
+        <aside class="card" aria-label="レビュー成果物の例">
+          <div class="card-kicker">レビュー</div>
+          <p class="card-title">P13-04 · <span class="sys">「settlement bridge v2」</span></p>
+          <ul class="card-rows">
+            <li><span class="k">判定</span><span><span class="stamp">AMBER</span></span></li>
+            <li><span class="k">所見</span><span>3 件（要修正）</span></li>
+            <li><span class="k">次の対応</span><span>P13-04を修正、再検証</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
 
-  body {
-    position: fixed;
-    width: 40%;
-    left: 30%;
-    right: 30%;
-    top: 20%;
-    border: 1px solid var(--grey);
-    border-radius: 1px;
-    text-align: center;
-    background: var(--black);
-    padding-bottom: 25px;
-    color: var(--offwhite);
-    font-family: sans-serif;
-    box-shadow:
-      0 0 0 5px var(--grey), /* dark grey */
-      0 0 0 10px var(--grey), /* minty blue */
-      0 0 0 12px var(--purple), /* white */
-      0 0 0 15px var(--black); /* black */
-  }
+    <section class="section" id="review" aria-labelledby="review-title">
+      <div class="wrap">
+        <p class="idx">00 · レビュー</p>
+        <h2 id="review-title">同じレビューを、三つの判断に使う。</h2>
+        <div class="doors">
+          <article class="door">
+            <div class="n">00</div>
+            <h3>監査前レビュー</h3>
+            <p>本監査の前に、設計・運用上の危険箇所と「監査前に直す / 監査会社に残す」を分けます。証明書は専門ファームが出します。</p>
+          </article>
+          <article class="door">
+            <div class="n">01</div>
+            <h3>Go / No-Go</h3>
+            <p>指定した X が、想定用途と運用条件のもとでリリース・統合してよいかを判定します。</p>
+          </article>
+          <article class="door">
+            <div class="n">02</div>
+            <h3>監査後の残存リスク</h3>
+            <p>既存の監査所見と実装差分を、残すリスクと次の手に整理します。</p>
+          </article>
+        </div>
+        <p class="footnote">任意：所見に付した ID のみ、改修伴走または再検証（上限付き）。監査の合格は保証しません。</p>
+      </div>
+    </section>
 
-  h2 {
-    margin-bottom: 10px;
-  }
+    <section class="section" id="scope" aria-labelledby="scope-title">
+      <div class="wrap">
+        <p class="idx">01 · 対象範囲</p>
+        <h2 id="scope-title">コントラクトだけでなく、その周りで失敗するものを見る。</h2>
+        <div class="scope">
+          <div class="scope-item">
+            <div class="n">00</div>
+            <h3>アーキテクチャと信頼境界</h3>
+            <p>署名者、管理者、ベンダー、オラクル、ブリッジ、アップグレード経路。</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">01</div>
+            <h3>カストディと取引フロー</h3>
+            <p>アドレス管理、署名、確認、リトライ、停止、復旧。</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">02</div>
+            <h3>コントラクトと統合ロジック</h3>
+            <p>状態遷移、トークン挙動、イベント前提、ノンスと手数料。</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">03</div>
+            <h3>ノード・RPC・依存関係</h3>
+            <p>可用性、フェイルオーバー、プロバイダ集中、チェーン固有の挙動。</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">04</div>
+            <h3>台帳と照合</h3>
+            <p>オンチェーンと内部台帳の整合、例外、手動介入、証跡。</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">05</div>
+            <h3>監視とインシデント対応</h3>
+            <p>サイレント障害、誤検知、停止条件、復旧、エスカレーション。</p>
+          </div>
+        </div>
+        <p class="footnote">範囲は、指定した一つの統合またはデジタル資産システム X の技術境界に従います。アクセスは、その判断に必要な範囲に限ります。</p>
+      </div>
+    </section>
 
-  a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    color: var(--offwhite);
-  }
+    <section class="section" id="fit" aria-labelledby="fit-title">
+      <div class="wrap">
+        <p class="idx">02 · 適合条件</p>
+        <h2 id="fit-title">対象システムと、必要な判断が言える案件に限ります。</h2>
+        <div class="split">
+          <div>
+            <h3>適合する案件</h3>
+            <ul class="clean">
+              <li>期限のある監査・リリース・統合・承認・提携の判断がある</li>
+              <li>レビュー対象のシステム X（または統合経路）を特定できる</li>
+              <li>コード・技術資料・担当者に、合意した範囲でアクセスできる</li>
+              <li>リスクに応じて設計や実装を変える意思がある</li>
+            </ul>
+          </div>
+          <div>
+            <h3>提供しないもの</h3>
+            <ul class="clean">
+              <li>「park13 レビュー済み」バッジや、正式な監査証明のみを目的とした契約</li>
+              <li>期限のない常駐・スタッフ増強</li>
+              <li>トークン / NFT / 投資 / 上場 / 市場戦略</li>
+              <li>X も判断も特定しない一般論の助言</li>
+            </ul>
+            <p class="note">書面の所見 ID に限定した改修・再検証は、別見積もりのオプションです。</p>
+          </div>
+        </div>
+        <p class="cred">park13 はファームではありません。シニアの EVM / インフラ実務者が、一人でレビューします。所見とエグゼクティブ要約は、日英で渡せます。</p>
+      </div>
+    </section>
 
-  .description {
-    margin-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-</style>
+    <section class="section section-ink" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-block">
+        <p class="idx">03 · 連絡</p>
+        <h2 id="contact-title">まず、レビュー対象 X を決める。</h2>
+        <p>対象システム、必要な判断（監査前 / リリース / 統合など）、期限を送ってください。適合すれば、範囲・必要資料・固定価格を返します。バッジや本監査証明書だけが必要なら、専門ファームを案内します。</p>
+        <a class="mail" href="mailto:contact@park13.digital?subject=park13%20%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E7%9B%B8%E8%AB%87&body=%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%20X%EF%BC%9A%0A%E5%BF%85%E8%A6%81%E3%81%AA%E5%88%A4%E6%96%AD%EF%BC%9A%0A%E6%9C%9F%E9%99%90%EF%BC%9A%0A">contact@park13.digital</a>
+        <div class="actions">
+          <a class="btn" href="mailto:contact@park13.digital?subject=park13%20%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BC%E7%9B%B8%E8%AB%87&body=%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%20X%EF%BC%9A%0A%E5%BF%85%E8%A6%81%E3%81%AA%E5%88%A4%E6%96%AD%EF%BC%9A%0A%E6%9C%9F%E9%99%90%EF%BC%9A%0A">システムを指定する</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div><strong>park13</strong> — 独立系テクニカルリスクレビュー · tokyo · <a href="/en/" hreflang="en">EN</a></div>
+      <p class="legal">Park13 K.K. · Technical risk assessment & hardening · 正式なセキュリティ監査証明書ではありません。本サイトの内容は勧誘ではなく、適合案件向けの説明です。</p>
+    </div>
+  </footer>
+</body>
 </html>
