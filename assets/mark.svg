@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="park13">
+  <!-- Mark A: 4×4 grid, 13 cells; top-right three cut; accent at cut edge -->
+  <g fill="#191A18">
+    <rect x="12" y="12" width="20" height="20"/>
+    <rect x="38" y="12" width="20" height="20"/>
+    <rect x="12" y="38" width="20" height="20"/>
+    <rect x="38" y="38" width="20" height="20"/>
+    <rect x="12" y="64" width="20" height="20"/>
+    <rect x="38" y="64" width="20" height="20"/>
+    <rect x="64" y="64" width="20" height="20"/>
+    <rect x="90" y="64" width="20" height="20"/>
+    <rect x="12" y="90" width="20" height="20"/>
+    <rect x="38" y="90" width="20" height="20"/>
+    <rect x="64" y="90" width="20" height="20"/>
+    <rect x="90" y="90" width="20" height="20"/>
+  </g>
+  <rect x="64" y="38" width="20" height="20" fill="#2E6E7E"/>
+</svg>
