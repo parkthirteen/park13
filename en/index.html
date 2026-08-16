@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Production-transition support for on-chain systems | park13</title>
-  <meta name="description" content="Technical support for a controlled production transition of regulated on-chain payment and tokenised-asset systems. Readiness decision, operating design, bounded integration support, and bilingual technical material.">
+  <title>Production-transition support for stablecoin and tokenised-asset systems | park13</title>
+  <meta name="description" content="Technical support for a controlled production transition of regulated stablecoin and tokenised-asset systems. Readiness decision, operating design, bounded integration support, and bilingual technical material.">
   <link rel="canonical" href="https://park13.digital/en/">
   <link rel="alternate" hreflang="en" href="https://park13.digital/en/">
   <link rel="alternate" hreflang="ja" href="https://park13.digital/">
@@ -14,15 +14,15 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="ja_JP">
   <meta property="og:url" content="https://park13.digital/en/">
-  <meta property="og:title" content="Production-transition technical support | park13">
-  <meta property="og:description" content="Move a named on-chain payment or tokenised-asset system from pilot to controlled production: readiness, operating design, bounded technical support, and bilingual material.">
+  <meta property="og:title" content="Production-transition support for stablecoin and tokenised-asset systems | park13">
+  <meta property="og:description" content="Move a named stablecoin or tokenised-asset system from pilot to controlled production: readiness, operating design, bounded technical support, and bilingual material.">
   <meta property="og:site_name" content="park13">
   <meta property="og:image" content="https://park13.digital/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://park13.digital/assets/og.png">
-  <meta name="twitter:title" content="Production-transition technical support | park13">
+  <meta name="twitter:title" content="Production-transition support for stablecoin and tokenised-asset systems | park13">
   <meta name="twitter:description" content="Readiness, operating design, bounded implementation or integration support, and bilingual technical material for a controlled production transition.">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@
     "legalName": "Park13 K.K.",
     "url": "https://park13.digital/",
     "email": "contact@park13.digital",
-    "description": "Production-transition technical support for blockchain integrations, regulated on-chain payment systems, and tokenised-asset infrastructure.",
+    "description": "Production-transition technical support for stablecoin, regulated on-chain payment, and tokenised-asset systems.",
     "areaServed": ["JP", "AU"],
     "address": {
       "@type": "PostalAddress",
@@ -62,9 +62,10 @@
         <a href="#scope">02 scope</a>
         <a href="#support">03 support</a>
         <a href="#partners">04 partners</a>
-        <a href="#process">05 process</a>
-        <a href="#fit">06 fit</a>
-        <a href="#contact">07 contact</a>
+        <a href="#japan">05 Japan</a>
+        <a href="#process">06 process</a>
+        <a href="#fit">07 fit</a>
+        <a href="#contact">08 contact</a>
         <a class="lang" href="/" lang="ja" hreflang="ja">日本語</a>
       </nav>
     </div>
@@ -74,9 +75,9 @@
     <section class="section hero" aria-labelledby="hero-title">
       <div class="wrap">
         <div>
-          <p class="eyebrow">Production-transition technical support · on-chain payments · tokenised assets</p>
-          <h1 id="hero-title">Bring one regulated on-chain system from pilot to controlled production.</h1>
-          <p>park13 helps regulated financial institutions — and the SIers, consultancies, and audit firms leading their engagements — make a defined production transition for on-chain payments and tokenised assets. Work is bounded around one system or integration, one transition decision, and a technical workstream with a clear scope and duration. The focus is the route from a working pilot to controlled operation: reconciliation, signing authority, deposits, withdrawals and settlement, failure handling, monitoring, recovery, and technical evidence.</p>
+          <p class="eyebrow">Production-transition technical support · stablecoins · tokenised assets</p>
+          <h1 id="hero-title">Bring one regulated stablecoin or tokenised-asset system from pilot to controlled production.</h1>
+          <p>park13 helps regulated financial institutions — and the SIers, consultancies, and audit firms leading their engagements — make a defined production transition for stablecoin, on-chain payment, and tokenised-asset systems. Work is bounded around one system or integration, one transition decision, and a technical workstream with a clear scope and duration. The focus is the route from a working pilot to controlled operation: reconciliation, signing authority, deposits, withdrawals and settlement, failure handling, monitoring, recovery, and technical evidence.</p>
           <div class="actions">
             <a class="btn" href="mailto:contact@park13.digital?subject=park13%20production%20transition%20support&amp;body=System%20%2F%20integration%3A%0AProduction%20transition%20decision%3A%0ADeadline%3A%0AWork%20package%20or%20scope%3A%0AMaterials%20available%3A%0A">Talk about your system</a>
             <a class="btn btn-ghost" href="#experience">Why park13 →</a>
@@ -114,8 +115,8 @@
           </article>
           <article class="door">
             <div class="n">01</div>
-            <h3>Founder-owned launch risk</h3>
-            <p>On-chain products designed and shipped in capital-constrained businesses where failure stayed with the people who built them.</p>
+            <h3>Reconciliation and evidence</h3>
+            <p>On-chain state against internal ledgers, break detection, exception handling, manual intervention, and audit-defensible evidence.</p>
           </article>
           <article class="door">
             <div class="n">02</div>
@@ -165,31 +166,36 @@
         <div class="scope">
           <div class="scope-item">
             <div class="n">00</div>
+            <h3>Architecture and trust boundaries</h3>
+            <p>Signers, administrators, vendors, oracles, bridges, upgrade paths, and the points where responsibility moves between systems.</p>
+          </div>
+          <div class="scope-item">
+            <div class="n">01</div>
             <h3>Ledgers and reconciliation</h3>
             <p>Chain state versus internal books, including successful transfers, exceptions, manual intervention, reorgs, and finality.</p>
           </div>
           <div class="scope-item">
-            <div class="n">01</div>
+            <div class="n">02</div>
             <h3>Key management and signing authority</h3>
             <p>Key custody, approval paths, segregation of duties, administrator authority, and authority to halt or recover.</p>
           </div>
           <div class="scope-item">
-            <div class="n">02</div>
+            <div class="n">03</div>
             <h3>Deposits, withdrawals, and settlement</h3>
             <p>Confirmation, retries, idempotency, double-credit prevention, exception clearance, and impact on users and operations.</p>
           </div>
           <div class="scope-item">
-            <div class="n">03</div>
+            <div class="n">04</div>
             <h3>Nodes, RPC, and external dependencies</h3>
             <p>RPC outages, provider concentration, failover, chain-specific failure behaviour, and external-service dependencies.</p>
           </div>
           <div class="scope-item">
-            <div class="n">04</div>
+            <div class="n">05</div>
             <h3>Monitoring, halt, and recovery</h3>
             <p>What must be detected, false positives, halt conditions, escalation, recovery steps, and reconciliation after recovery.</p>
           </div>
           <div class="scope-item">
-            <div class="n">05</div>
+            <div class="n">06</div>
             <h3>Control evidence and technical material</h3>
             <p>Design decisions, approvals, operating records, exception handling, and acceptance conditions for audit and internal approval.</p>
           </div>
@@ -249,15 +255,24 @@
               <li>The prime retains the client relationship and contact. park13 will not approach that client directly</li>
               <li>The role is a defined specialist workstream, not generic staffing or an open-ended team</li>
               <li>park13 does not take perpetual operational ownership of the client's system or replace the prime's contractual responsibility</li>
+              <li>Confidentiality, information handling, and any non-compete terms are set in the engagement contract. Contracting entity: Park13 K.K., Tokyo.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="section" id="japan" aria-labelledby="japan-title">
+      <div class="wrap">
+        <p class="idx">05 · entering the Japanese market</p>
+        <h2 id="japan-title">The engineering conversation happens in Japanese.</h2>
+        <p>Foreign payment, custody, and infrastructure providers entering Japan often face technical due diligence and internal approval in Japanese, inside institutions whose process will not adapt to English-only documentation. park13 can review what a Japanese counterparty will require of the system, produce technical material in the form its internal process expects, and turn objections into defined engineering work.</p>
+      </div>
+    </section>
+
     <section class="section" id="process" aria-labelledby="process-title">
       <div class="wrap">
-        <p class="idx">05 · process</p>
+        <p class="idx">06 · process</p>
         <h2 id="process-title">Fix the decision, scope, and evidence path before work begins.</h2>
         <div class="exp">
           <article class="door">
@@ -268,7 +283,7 @@
           <article class="door">
             <div class="n">02</div>
             <h3>Assess and design</h3>
-            <p>Map the gap between the current system and the conditions for operation. Set the target for reconciliation, authority, incident response, monitoring, and evidence.</p>
+            <p>Review documentation, code, architecture, configuration, and operating evidence against the intended conditions, with questions put directly to responsible owners. Map the gap between the current system and the conditions for operation, then set the target for reconciliation, authority, incident response, monitoring, and evidence.</p>
           </article>
           <article class="door">
             <div class="n">03</div>
@@ -286,13 +301,13 @@
 
     <section class="section" id="fit" aria-labelledby="fit-title">
       <div class="wrap">
-        <p class="idx">06 · fit</p>
+        <p class="idx">07 · fit</p>
         <h2 id="fit-title">For a real production decision on a defined system.</h2>
         <div class="split">
           <div>
             <h3>This is the problem park13 takes</h3>
             <ul class="clean">
-              <li>You are moving a regulated on-chain payment or tokenised-asset system from pilot to controlled production</li>
+              <li>You are moving a regulated stablecoin or tokenised-asset system from pilot to controlled production</li>
               <li>You need a production decision that includes reconciliation, authority, failure behaviour, monitoring, recovery, and evidence</li>
               <li>You are a prime contractor that needs a bounded technical specialist while retaining the client relationship</li>
               <li>You need technical material that can be used in formal audit, internal approval, or internal-control conversations in English and Japanese</li>
@@ -304,6 +319,7 @@
               <li>You need only formal certification, regulatory assurance, or accounting assurance</li>
               <li>You need indefinite staff augmentation, a standing development team, or an open-ended engagement</li>
               <li>You want another party to own ongoing system operations indefinitely</li>
+              <li>The work is primarily token design, NFT or consumer campaigns, listings, investment advice, or market strategy</li>
               <li>No named system, production decision, or deadline has been defined yet</li>
             </ul>
           </div>
@@ -314,9 +330,9 @@
 
     <section class="section section-ink" id="contact" aria-labelledby="contact-title">
       <div class="wrap contact-block">
-        <p class="idx">07 · contact</p>
+        <p class="idx">08 · contact</p>
         <h2 id="contact-title">Send the system, the transition decision, and the deadline.</h2>
-        <p>A short note is enough. park13 replies with fit, the needed work package and scope, required material, expected duration, and fee. If you are the prime, describe the engagement model and deliverable so the technical work can fit inside it.</p>
+        <p>A short note is enough. park13 replies with fit, the needed work package and scope, required material, expected duration, and fee. If you are the prime, describe the engagement model and deliverable so the technical work can fit inside it. If formal certification is the main need, park13 can point you to a specialist audit firm.</p>
         <p class="note" style="color:inherit;opacity:0.75">Prefer not to use mailto from a locked-down browser? Write to the address below from your usual mail client.</p>
         <a class="mail" href="mailto:contact@park13.digital?subject=park13%20production%20transition%20support&amp;body=System%20%2F%20integration%3A%0AProduction%20transition%20decision%3A%0ADeadline%3A%0AWork%20package%20or%20scope%3A%0AMaterials%20available%3A%0A">contact@park13.digital</a>
         <div class="actions">
