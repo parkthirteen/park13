@@ -118,6 +118,7 @@ html[lang="ja"] h1 {
   color: var(--graphite);
   font-size: clamp(1rem, 1.6vw, 1.1875rem);
 }
+.sub + .sub { margin-top: 0.75rem; }
 .sub a { color: var(--ink); }
 .sub a:hover { color: var(--teal); }
 
