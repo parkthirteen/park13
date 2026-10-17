@@ -1,6 +1,6 @@
 # park13.digital
 
-Static marketing site for **park13** (Park13 K.K.) — independent technical risk review.
+Single-page site for **park13** (Park13 K.K.) — software for modern finance. Specialist blockchain services are available through portfolio company [mini labo](https://mini-labo.org/).
 
 ## Structure
 
@@ -9,7 +9,8 @@ Static marketing site for **park13** (Park13 K.K.) — independent technical ris
 | `/` (`index.html`) | Japanese (primary) |
 | `/en/` | English |
 | `/assets/site.css` | Shared styles |
-| `/assets/mark.svg` | Mark A logo |
+| `/assets/mark.svg` | Mark A logo (also inlined in each page so it adapts to dark mode) |
+| `/assets/og.png` | Social preview image (1200×630) |
 | `/assets/favicon.svg` | Favicon |
 | `CNAME` | `park13.digital` |
 | `robots.txt` / `sitemap.xml` | SEO |
