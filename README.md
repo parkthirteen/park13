@@ -1,6 +1,6 @@
 # park13.digital
 
-Single-page site for **park13** (Park13 K.K.) — financial problems, solved in software. Specialist blockchain services are available through portfolio company [mini labo](https://mini-labo.org/).
+Single-page site for **park13** (Park13 K.K.) — financial problems, solved with software. Specialist blockchain services are available through portfolio company [mini labo](https://mini-labo.org/).
 
 ## Structure
 
