@@ -3,341 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ブロックチェーン基盤の本番移行支援 | park13</title>
-  <meta name="description" content="ステーブルコイン（電子決済手段）・トークン化資産など、ブロックチェーン基盤をパイロットから統制の取れた本番運用へ移行するための技術支援。移行可否の評価、運用設計、範囲を限定した実装・統合支援、日英の技術資料を提供します。">
+  <title>park13</title>
+  <meta name="description" content="park13 は、ソフトウェアで課題を解決します。その多くは金融に関わるものです。ブロックチェーン分野の専門的な開発は、ポートフォリオ企業の mini labo が担っています。">
   <link rel="canonical" href="https://park13.digital/">
   <link rel="alternate" hreflang="ja" href="https://park13.digital/">
   <link rel="alternate" hreflang="en" href="https://park13.digital/en/">
   <link rel="alternate" hreflang="x-default" href="https://park13.digital/">
-  <meta name="theme-color" content="#F7F8F7">
+  <meta name="theme-color" content="#F7F8F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141513" media="(prefers-color-scheme: dark)">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:url" content="https://park13.digital/">
-  <meta property="og:title" content="ブロックチェーン基盤の本番移行支援 | park13">
-  <meta property="og:description" content="ステーブルコイン（電子決済手段）・トークン化資産などのブロックチェーン基盤を、パイロットから統制の取れた本番運用へ。移行可否の評価、運用設計、技術支援、日英の技術資料を提供します。">
+  <meta property="og:title" content="park13">
+  <meta property="og:description" content="ソフトウェアで課題を解決します。その多くは金融に関わるものです。">
   <meta property="og:site_name" content="park13">
   <meta property="og:image" content="https://park13.digital/assets/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://park13.digital/assets/og.png">
-  <meta name="twitter:title" content="ブロックチェーン基盤の本番移行支援 | park13">
-  <meta name="twitter:description" content="本番移行の可否、運用設計、範囲を定めた実装・統合支援、日英の技術資料。">
+  <meta name="twitter:title" content="park13">
+  <meta name="twitter:description" content="ソフトウェアで課題を解決します。その多くは金融に関わるものです。">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans+JP:wght@400;500&amp;family=Space+Grotesk:wght@400;500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500&amp;family=Space+Grotesk:wght@400;500&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Organization",
     "name": "park13",
     "legalName": "Park13 K.K.",
     "url": "https://park13.digital/",
+    "logo": "https://park13.digital/assets/mark.svg",
     "email": "contact@park13.digital",
-    "description": "Production-transition technical support for blockchain systems, with a focus on stablecoin, on-chain payment, and tokenised-asset systems.",
-    "areaServed": ["JP", "AU"],
+    "description": "park13 solves problems through software, mostly financial ones. Specialist blockchain work is done through its portfolio company, mini labo.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Tokyo",
       "addressCountry": "JP"
     },
-    "knowsLanguage": ["ja", "en"]
+    "subOrganization": {
+      "@type": "Organization",
+      "name": "mini labo",
+      "url": "https://mini-labo.org/"
+    }
   }
   </script>
 </head>
 <body>
-  <a class="skip" href="#main">本文へスキップ</a>
-  <header class="site-header">
-    <div class="wrap">
+  <div class="page">
+    <header class="top">
       <a class="brand" href="/">
-        <img src="/assets/mark.svg" width="28" height="28" alt="">
-        <span class="brand-name">park13</span>
+        <svg class="mark" viewBox="0 0 120 120" aria-hidden="true">
+          <g class="cell">
+            <rect x="12" y="12" width="20" height="20"/><rect x="38" y="12" width="20" height="20"/>
+            <rect x="12" y="38" width="20" height="20"/><rect x="38" y="38" width="20" height="20"/>
+            <rect x="12" y="64" width="20" height="20"/><rect x="38" y="64" width="20" height="20"/><rect x="64" y="64" width="20" height="20"/><rect x="90" y="64" width="20" height="20"/>
+            <rect x="12" y="90" width="20" height="20"/><rect x="38" y="90" width="20" height="20"/><rect x="64" y="90" width="20" height="20"/><rect x="90" y="90" width="20" height="20"/>
+          </g>
+          <rect class="accent" x="64" y="38" width="20" height="20"/>
+        </svg>
+        <span>park13</span>
       </a>
-      <nav class="nav" aria-label="ページ内">
-        <a href="#experience">00 経験</a>
-        <a href="#transition">01 本番移行</a>
-        <a href="#scope">02 対象</a>
-        <a href="#support">03 支援・成果物</a>
-        <a href="#partners">04 協業</a>
-        <a href="#process">05 進め方</a>
-        <a href="#fit">06 適合</a>
-        <a href="#contact">07 連絡</a>
-        <a class="lang" href="/en/" lang="en" hreflang="en">EN</a>
-      </nav>
-    </div>
-  </header>
+      <a class="lang" href="/en/" lang="en" hreflang="en">English</a>
+    </header>
 
-  <main id="main">
-    <section class="section hero" aria-labelledby="hero-title">
-      <div class="wrap">
-        <div>
-          <p class="eyebrow">ブロックチェーン基盤 · ステーブルコイン（電子決済手段）・トークン化資産 · 本番移行</p>
-          <h1 id="hero-title">ブロックチェーン基盤を、実証から統制の取れた本番運用へ移す。</h1>
-          <p>park13 は、金融機関・事業会社と、その案件を担う SIer・コンサルティング会社・監査ファームのために、ステーブルコイン（電子決済手段）・トークン化資産を含むブロックチェーン基盤の本番移行を技術面から支援します。対象は一つのシステムまたは統合、一つの移行判断、範囲と期間を定めた技術作業です。照合、署名権限、入出金・決済、障害時の停止・復旧、監視、内部統制の証跡までを、実装だけでなく運用できる形に整えます。</p>
-          <div class="actions">
-            <a class="btn" href="mailto:contact@park13.digital?subject=park13%20%E6%9C%AC%E7%95%AA%E7%A7%BB%E8%A1%8C%E3%81%AE%E7%9B%B8%E8%AB%87&amp;body=%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%EF%BC%9A%0A%E6%9C%AC%E7%95%AA%E7%A7%BB%E8%A1%8C%E3%81%A7%E6%B1%BA%E3%82%81%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%EF%BC%9A%0A%E6%9C%9F%E9%99%90%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E3%81%99%E3%82%8B%E6%94%AF%E6%8F%B4%EF%BC%88%E8%A9%95%E4%BE%A1%E3%83%BB%E8%A8%AD%E8%A8%88%E3%83%BB%E5%AE%9F%E8%A3%85%2F%E7%B5%B1%E5%90%88%E3%83%BB%E6%8A%80%E8%A1%93%E8%B3%87%E6%96%99%EF%BC%89%EF%BC%9A%0A%E7%8F%BE%E5%9C%A8%E3%81%82%E3%82%8B%E8%B3%87%E6%96%99%EF%BC%9A%0A">相談する</a>
-            <a class="btn btn-ghost" href="#experience">なぜ park13 か →</a>
-          </div>
-          <ul class="hero-points">
-            <li>本番移行の可否</li>
-            <li>照合・権限・復旧</li>
-            <li>範囲と期間を定めた作業</li>
-            <li>日英の技術資料</li>
-          </ul>
-        </div>
-        <aside class="card" aria-label="本番移行作業の例">
-          <div class="card-kicker">本番移行作業の例</div>
-          <p class="card-title">例 · <span class="sys">「settlement bridge v2」</span></p>
-          <ul class="card-rows">
-            <li><span class="k">移行判断</span><span><span class="stamp">AMBER</span></span></li>
-            <li><span class="k">作業</span><span>照合の例外経路、停止・復旧手順</span></li>
-            <li><span class="k">次の対応</span><span>運用設計と受入条件を定義</span></li>
-          </ul>
-        </aside>
-      </div>
-    </section>
+    <main>
+      <h1>park13 は、ソフトウェアで課題を解決します。<br>その多くは金融に関わるものです。</h1>
+      <p class="sub">ブロックチェーン分野の専門的な開発は、ポートフォリオ企業の <a href="https://mini-labo.org/" lang="en">mini labo</a> が担っています。</p>
+    </main>
 
-    <section class="section" id="experience" aria-labelledby="experience-title">
-      <div class="wrap">
-        <p class="idx">00 · 経験</p>
-        <h2 id="experience-title">規制下の本番運用と、創業者としての製品投入。その両方です。</h2>
-        <p>park13 は、シニア EVM インフラエンジニアが一人で担う実務です。各国の規制下で事業を行うグローバルなデジタル資産企業で、本番ブロックチェーン基盤の設計・統合・運用に携わってきた経験と、日本・オーストラリアの小規模事業で資本・納期・評判を負いながらオンチェーン製品を立ち上げてきた経験の両方を、本番移行の判断と技術作業に使います。</p>
-        <p>大規模組織で求められる統制、追跡可能性、運用規律と、小規模事業で求められる速度、優先順位付け、結果への直接責任。その両方を踏まえて、どの条件なら指定したシステムを本番運用へ移行できるかを整理します。</p>
-        <div class="exp">
-          <article class="door">
-            <div class="n">00</div>
-            <h3>本番ブロックチェーンインフラ</h3>
-            <p>L1/L2、ブリッジ、トークン対応、カストディ・取引境界、監査後の改修、本番運用。</p>
-          </article>
-          <article class="door">
-            <div class="n">01</div>
-            <h3>照合と証跡</h3>
-            <p>オンチェーン状態と内部台帳の整合、差異検知、例外処理、手動介入、監査に耐える証跡。</p>
-          </article>
-          <article class="door">
-            <div class="n">02</div>
-            <h3>システム全体を見る実装経験</h3>
-            <p>コントラクト、バックエンド、ノード・RPC、取引ライフサイクル、照合、監視、障害対応。</p>
-          </article>
-          <article class="door">
-            <div class="n">03</div>
-            <h3>日英両言語での意思決定支援</h3>
-            <p>技術チーム、経営層、提携先、稟議向けの技術資料を英語・日本語で提供します。</p>
-          </article>
-        </div>
-        <p class="footnote">上記は本実務の背景となる職務・事業経験の要約です。所属先や取引先による park13 の推奨、承認、提携を意味しません。</p>
-      </div>
-    </section>
-
-    <section class="section" id="transition" aria-labelledby="transition-title">
-      <div class="wrap">
-        <p class="idx">01 · 本番移行の判断</p>
-        <h2 id="transition-title">本番移行は、送金の成功だけでは判断できません。</h2>
-        <p>パイロットで送金が成功しても、内部台帳が合うとは限りません。チェーンの再編成、RPC 障害や事業者への集中、署名権限の不明確さ、再試行による二重計上、検知されない異常は、統制の取れた本番運用への移行を止めます。これらは、スマートコントラクトのコード監査だけでは扱い切れない運用・統合上の論点です。専門の監査ファームによる評価を補い、重複しない役割で扱います。</p>
-        <div class="doors">
-          <article class="door">
-            <div class="n">00</div>
-            <h3>移行可否を明確にする</h3>
-            <p>指定したシステムが、合意した運用条件のもとで本番移行できるかを、前提・未解決事項・必要な証拠とともに整理します。</p>
-          </article>
-          <article class="door">
-            <div class="n">01</div>
-            <h3>実際に動く経路を設計する</h3>
-            <p>入出金、決済、照合、署名、障害時の停止・復旧が、担当者と監視を含めて連続して機能する形を定めます。</p>
-          </article>
-          <article class="door">
-            <div class="n">02</div>
-            <h3>判断に使える証跡を残す</h3>
-            <p>本監査、稟議、内部統制の会話に必要な技術資料、運用上の前提、受入条件を明確にします。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="scope" aria-labelledby="scope-title">
-      <div class="wrap">
-        <p class="idx">02 · 対象</p>
-        <h2 id="scope-title">コントラクトの外側を含め、本番で止まる経路を扱います。</h2>
-        <p class="lede">実際に送金できても、内部台帳のずれ、二重計上、復旧できない停止が残ることがあります。一つの対象システムまたは統合について、本番移行の判断に必要な経路と運用条件を確認します。</p>
-        <div class="scope">
-          <div class="scope-item">
-            <div class="n">00</div>
-            <h3>アーキテクチャと信頼境界</h3>
-            <p>署名者、管理者、ベンダー、オラクル、ブリッジ、アップグレード経路、システム間で責任が移る箇所。</p>
-          </div>
-          <div class="scope-item">
-            <div class="n">01</div>
-            <h3>台帳と照合</h3>
-            <p>送金成功時を含むオンチェーン状態と内部台帳の整合、例外処理、手動介入、再編成・確定性の扱い。</p>
-          </div>
-          <div class="scope-item">
-            <div class="n">02</div>
-            <h3>鍵管理と署名権限</h3>
-            <p>鍵の保管、承認経路、職務分離、管理者権限、緊急時の停止と復旧の権限。</p>
-          </div>
-          <div class="scope-item">
-            <div class="n">03</div>
-            <h3>入出金・決済フロー</h3>
-            <p>確認、再試行、冪等性、二重計上防止、例外の解消、利用者と内部担当者への影響。</p>
-          </div>
-          <div class="scope-item">
-            <div class="n">04</div>
-            <h3>ノード・RPC・外部依存</h3>
-            <p>RPC 障害、事業者の集中、フェイルオーバー、チェーン固有の失敗挙動、外部サービスへの依存。</p>
-          </div>
-          <div class="scope-item">
-            <div class="n">05</div>
-            <h3>監視、停止、復旧</h3>
-            <p>検知すべき異常、誤検知、停止条件、エスカレーション、復旧手順と復旧後の照合。</p>
-          </div>
-          <div class="scope-item">
-            <div class="n">06</div>
-            <h3>内部統制の証跡</h3>
-            <p>設計判断、承認、運用記録、例外対応、受入条件を、監査と内部承認の会話に使える形で残します。</p>
-          </div>
-        </div>
-        <p class="footnote">全社を対象とする一般診断ではありません。対象、移行目的、確認する経路、除外する範囲を最初に合意します。</p>
-      </div>
-    </section>
-
-    <section class="section" id="support" aria-labelledby="support-title">
-      <div class="wrap">
-        <p class="idx">03 · 支援と成果物</p>
-        <h2 id="support-title">一つの本番移行を、四つの作業パッケージで進めます。</h2>
-        <p>作業パッケージは、別々のサービスではなく、同じ対象システムと移行目的に結び付けます。必要なものだけを選び、範囲、期間、成果物を合意します。</p>
-        <div class="exp">
-          <article class="door">
-            <div class="n">00</div>
-            <h3>本番移行の評価・可否判断</h3>
-            <p>指定したシステムが、合意した運用条件で本番移行できるかを評価し、判断、前提、未解決事項、必要な証拠を示します。</p>
-          </article>
-          <article class="door">
-            <div class="n">01</div>
-            <h3>目標・運用設計</h3>
-            <p>照合、署名権限、失敗と復旧、監視、証跡を対象に、目標とする構成と運用手順を設計します。</p>
-          </article>
-          <article class="door">
-            <div class="n">02</div>
-            <h3>範囲を限定した実装・統合支援</h3>
-            <p>合意した変更、統合箇所、受入条件、期間と上限を定めて実施します。常駐の人員補充、終わりのない開発チーム、恒常的な運用責任は引き受けません。</p>
-          </article>
-          <article class="door">
-            <div class="n">03</div>
-            <h3>監査・稟議・内部統制の技術資料</h3>
-            <p>設計判断、運用上の前提、証跡、未解決事項、受入条件を、英語と日本語で整理し、関係者との技術的な会話に備えます。</p>
-          </article>
-        </div>
-        <p class="footnote">評価、設計、実装、検証は別の作業として扱います。park13 が実装を支援した場合も、受入は合意した基準に対して行います。独立した検証や正式な監査・規制・会計上の保証は、別の範囲と専門の監査ファームが担います。</p>
-      </div>
-    </section>
-
-    <section class="section" id="partners" aria-labelledby="partners-title">
-      <div class="wrap">
-        <p class="idx">04 · 協業</p>
-        <h2 id="partners-title">元請けの案件に、範囲を限定した技術専門家として参加します。</h2>
-        <p>SIer、コンサルティング会社、監査ファームなどが顧客契約と成果物を担う案件では、park13 は指定された一つの技術作業に専門家として参加できます。元請けが顧客との関係と窓口を維持し、park13 は合意した範囲の技術資料、設計、実装・統合支援を提供します。</p>
-        <div class="split">
-          <div>
-            <h3>参加の仕方</h3>
-            <ul class="clean">
-              <li>元請けの契約と成果物に合わせ、対象システム、移行目的、役割、期間、受入条件を明文化します</li>
-              <li>元請けの窓口と進め方に合わせて、技術的な判断材料、設計、資料を日英で提供します</li>
-              <li>一つの技術作業を、必要な深さまで担当し、顧客案件全体の責任を置き換えません</li>
-            </ul>
-          </div>
-          <div>
-            <h3>守る境界</h3>
-            <ul class="clean">
-              <li>元請けが紹介した顧客に対して、park13 から直接アプローチすることはありません。顧客との関係と窓口は元請けに残ります</li>
-              <li>役割は、範囲と期間を定めた専門作業です。一般的な人員補充や、終わりのないチーム提供ではありません</li>
-              <li>顧客システムの恒常的な運用責任や、元請けの契約上の責任を park13 が引き受けるものではありません</li>
-              <li>秘密保持、情報管理、競業に関する条件は個別契約で定めます。契約主体は東京の Park13 K.K. です</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="process" aria-labelledby="process-title">
-      <div class="wrap">
-        <p class="idx">05 · 進め方</p>
-        <h2 id="process-title">対象、移行判断、作業範囲を先に固定します。</h2>
-        <div class="exp">
-          <article class="door">
-            <div class="n">01</div>
-            <h3>本番移行の前提をそろえる</h3>
-            <p>対象システム、移行で決めたいこと、期限、利用条件、現在ある資料、元請けがいる場合の体制を確認します。</p>
-          </article>
-          <article class="door">
-            <div class="n">02</div>
-            <h3>評価と運用設計を行う</h3>
-            <p>資料、コード、構成、設定、運用上の証拠を確認し、担当者へ質問します。現状と必要な運用条件の差分を整理し、照合、権限、障害対応、監視、証跡の目標を定めます。</p>
-          </article>
-          <article class="door">
-            <div class="n">03</div>
-            <h3>必要な実装・統合だけを進める</h3>
-            <p>実装が必要な場合は、変更対象、受入条件、期間、上限を合意したうえで、限定した技術作業として進めます。</p>
-          </article>
-          <article class="door">
-            <div class="n">04</div>
-            <h3>資料を引き渡し、検証を分ける</h3>
-            <p>監査、稟議、内部統制に使う技術資料を整えます。再確認や独立した検証は、実装とは別に範囲と担当を定めます。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="fit" aria-labelledby="fit-title">
-      <div class="wrap">
-        <p class="idx">06 · 適合</p>
-        <h2 id="fit-title">本番移行の技術作業を、期限と範囲で定められるチーム向けです。</h2>
-        <div class="split">
-          <div>
-            <h3>park13 が引き受ける問題</h3>
-            <ul class="clean">
-              <li>ブロックチェーン基盤を、パイロットから統制の取れた本番運用へ移行したい。ステーブルコイン（電子決済手段）・トークン化資産などを含みます</li>
-              <li>一つの対象システムについて、照合、権限、失敗時の挙動、監視、証跡まで含めて移行可否を決めたい</li>
-              <li>元請けの案件で、顧客関係を維持したまま、限定した技術専門作業を任せたい</li>
-              <li>本監査、内部承認、内部統制の会話に使える技術資料を、日英でそろえたい</li>
-            </ul>
-          </div>
-          <div>
-            <h3>別の選択肢が適している場合</h3>
-            <ul class="clean">
-              <li>正式な監査証明、規制上または会計上の保証だけが必要</li>
-              <li>常駐形式の人員補充、継続的な開発チーム、期限のない支援が必要</li>
-              <li>システム全体の恒常的な運用責任を外部に委ねたい</li>
-              <li>トークン設計、NFT・消費者向けキャンペーン、上場、投資助言、市場戦略が主な課題</li>
-              <li>対象システム、移行判断、期限がまだ定まっていない</li>
-            </ul>
-          </div>
-        </div>
-        <p class="cred">すべての案件を同一の担当者が直接進め、同時に進める本格案件は一件に限定しています。背景や参照は、本格的なご相談の際に個別にお伝えします。</p>
-      </div>
-    </section>
-
-    <section class="section section-ink" id="contact" aria-labelledby="contact-title">
-      <div class="wrap contact-block">
-        <p class="idx">07 · 連絡</p>
-        <h2 id="contact-title">対象システム、本番移行で決めたいこと、期限をお知らせください。</h2>
-        <p>短いメモで結構です。適合、必要な作業パッケージと範囲、必要な資料、想定期間、費用をご案内します。元請けの案件の場合は、元請けの体制と成果物に合わせてご相談ください。正式な監査証明が主目的の場合は、適切な専門ファームをご案内します。</p>
-        <p class="note" style="color:inherit;opacity:0.75">社内ブラウザで mailto が使えない場合は、通常のメールクライアントから下記アドレスへご連絡ください。</p>
-        <a class="mail" href="mailto:contact@park13.digital?subject=park13%20%E6%9C%AC%E7%95%AA%E7%A7%BB%E8%A1%8C%E3%81%AE%E7%9B%B8%E8%AB%87&amp;body=%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%EF%BC%9A%0A%E6%9C%AC%E7%95%AA%E7%A7%BB%E8%A1%8C%E3%81%A7%E6%B1%BA%E3%82%81%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%EF%BC%9A%0A%E6%9C%9F%E9%99%90%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E3%81%99%E3%82%8B%E6%94%AF%E6%8F%B4%EF%BC%88%E8%A9%95%E4%BE%A1%E3%83%BB%E8%A8%AD%E8%A8%88%E3%83%BB%E5%AE%9F%E8%A3%85%2F%E7%B5%B1%E5%90%88%E3%83%BB%E6%8A%80%E8%A1%93%E8%B3%87%E6%96%99%EF%BC%89%EF%BC%9A%0A%E7%8F%BE%E5%9C%A8%E3%81%82%E3%82%8B%E8%B3%87%E6%96%99%EF%BC%9A%0A">contact@park13.digital</a>
-        <div class="actions">
-          <a class="btn" href="mailto:contact@park13.digital?subject=park13%20%E6%9C%AC%E7%95%AA%E7%A7%BB%E8%A1%8C%E3%81%AE%E7%9B%B8%E8%AB%87&amp;body=%E5%AF%BE%E8%B1%A1%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%EF%BC%9A%0A%E6%9C%AC%E7%95%AA%E7%A7%BB%E8%A1%8C%E3%81%A7%E6%B1%BA%E3%82%81%E3%81%9F%E3%81%84%E3%81%93%E3%81%A8%EF%BC%9A%0A%E6%9C%9F%E9%99%90%EF%BC%9A%0A%E5%B8%8C%E6%9C%9B%E3%81%99%E3%82%8B%E6%94%AF%E6%8F%B4%EF%BC%88%E8%A9%95%E4%BE%A1%E3%83%BB%E8%A8%AD%E8%A8%88%E3%83%BB%E5%AE%9F%E8%A3%85%2F%E7%B5%B1%E5%90%88%E3%83%BB%E6%8A%80%E8%A1%93%E8%B3%87%E6%96%99%EF%BC%89%EF%BC%9A%0A%E7%8F%BE%E5%9C%A8%E3%81%82%E3%82%8B%E8%B3%87%E6%96%99%EF%BC%9A%0A">相談する</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <div><strong>park13</strong> — 本番移行の技術支援 · tokyo · <a href="/en/" hreflang="en">EN</a></div>
-      <p class="legal">Park13 K.K. · 東京 · 本番移行の技術支援 · 判断は合意した用途・前提・範囲に限定されます。正式な監査証明、規制上または会計上の保証は専門の監査ファームが担います。park13 は技術支援を提供し、これらの保証を発行しません。責任範囲は個別契約で定めます。</p>
-    </div>
-  </footer>
+    <footer class="bottom">
+      <a class="mail" href="mailto:contact@park13.digital">contact@park13.digital</a>
+      <p>Park13 K.K. · 東京</p>
+    </footer>
+  </div>
 </body>
 </html>
