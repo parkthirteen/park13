@@ -144,6 +144,8 @@ html[lang="ja"] h1 {
   font-size: 0.875rem;
   text-wrap: balance;
 }
+/* break only between phrases */
+html[lang="ja"] .aside span { display: inline-block; }
 
 /* —— footer —— */
 .bottom {
