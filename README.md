@@ -10,7 +10,8 @@ Single-page site for **park13** (park13株式会社) — real needs, creative so
 | `/en/` | English |
 | `/assets/site.css` | Shared styles |
 | `/assets/mark.svg` | Mark A logo (also inlined in each page so it adapts to dark mode) |
-| `/assets/og.png` | Social preview image (1200×630) |
+| `/assets/og/ja.png`, `/assets/og/en.png` | Social preview images per language (1200×630); `/assets/og.png` is kept for old shares |
+| `/favicon.ico`, `/apple-touch-icon.png`, `/assets/icon-512.png` | Raster icons for browsers, iOS and search engines |
 | `/assets/favicon.svg` | Favicon |
 | `CNAME` | `park13.digital` |
 | `robots.txt` / `sitemap.xml` | SEO |
