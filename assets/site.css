@@ -99,27 +99,53 @@ main {
 h1 {
   margin: 0;
   font-weight: 400;
-  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-size: clamp(1.5rem, 8.5vw, 3.75rem);
   line-height: 1.2;
   letter-spacing: -0.02em;
-  text-wrap: balance;
 }
-html[lang="ja"] h1,
-html[lang="ja"] .sub { word-break: auto-phrase; }
+/* one line per span: the break is fixed, and the size scales so neither line wraps */
+h1 span { display: block; white-space: nowrap; }
+html[lang="ja"] .ventures,
+html[lang="ja"] .aside { word-break: auto-phrase; }
 html[lang="ja"] h1 {
-  font-size: clamp(1.75rem, 4.2vw, 3.25rem);
+  font-size: clamp(1.25rem, 6.8vw, 3.25rem);
   line-height: 1.5;
   letter-spacing: 0;
 }
 
-.sub {
-  margin: 1.75rem 0 0;
-  max-width: 34rem;
-  color: var(--graphite);
-  font-size: clamp(1rem, 1.6vw, 1.1875rem);
+/* —— what park13 runs —— */
+.ventures {
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 40rem;
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
 }
-.sub a { color: var(--ink); }
-.sub a:hover { color: var(--teal); }
+.ventures li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--hairline);
+}
+.ventures li:last-child { border-bottom: 1px solid var(--hairline); }
+.ventures .what { color: var(--graphite); font-size: 0.875em; }
+@media (min-width: 640px) {
+  .ventures li {
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 2rem;
+  }
+  .ventures .what { font-size: 1em; }
+}
+
+.aside {
+  margin: 1.25rem 0 0;
+  color: var(--graphite);
+  font-size: 0.875rem;
+  text-wrap: balance;
+}
+/* break only between phrases */
+html[lang="ja"] .aside span { display: inline-block; }
 
 /* —— footer —— */
 .bottom {
