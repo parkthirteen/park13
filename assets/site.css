@@ -105,21 +105,38 @@ h1 {
   text-wrap: balance;
 }
 html[lang="ja"] h1,
-html[lang="ja"] .sub { word-break: auto-phrase; }
+html[lang="ja"] .ventures { word-break: auto-phrase; }
 html[lang="ja"] h1 {
   font-size: clamp(1.75rem, 4.2vw, 3.25rem);
   line-height: 1.5;
   letter-spacing: 0;
 }
 
-.sub {
-  margin: 1.75rem 0 0;
-  max-width: 34rem;
-  color: var(--graphite);
-  font-size: clamp(1rem, 1.6vw, 1.1875rem);
+/* —— what park13 runs —— */
+.ventures {
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 40rem;
+  font-size: clamp(1rem, 1.6vw, 1.125rem);
 }
-.sub a { color: var(--ink); }
-.sub a:hover { color: var(--teal); }
+.ventures li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--hairline);
+}
+.ventures li:last-child { border-bottom: 1px solid var(--hairline); }
+.ventures .what { color: var(--graphite); font-size: 0.875em; }
+.ventures .note { color: var(--graphite); font-size: 0.875em; margin-left: 0.35em; }
+@media (min-width: 640px) {
+  .ventures li {
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 2rem;
+  }
+  .ventures .what { font-size: 1em; }
+}
 
 /* —— footer —— */
 .bottom {

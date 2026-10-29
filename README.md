@@ -1,6 +1,6 @@
 # park13.digital
 
-Single-page site for **park13** (park13株式会社) — software for modern finance. Specialist blockchain services are available through portfolio company [mini labo](https://mini-labo.org/).
+Single-page site for **park13** (park13株式会社) — real needs, creative software. Runs [translate.park13.digital](https://translate.park13.digital/) (certified document translation) and holds portfolio company [mini labo](https://mini-labo.org/), a creative blockchain studio.
 
 ## Structure
 
